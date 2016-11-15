@@ -1,0 +1,35 @@
+[core]
+  editor = vim
+[color]
+  ui = auto
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[commit]
+  verbose = true
+[pull]
+  rebase = true
+[branch]
+  autosetuprebase = always
+[push]
+  default = current
+[user]
+  name = Clément Gillard
+  email = clement.gillard@epita.fr
+[merge]
+  tool = vimdiff
+[rebase]
+  autosquash = true
+[alias]
+  st = status
+  co = checkout
+
+  amend = commit --amend --no-edit
+  abort = rebase --abort
+  continue = rebase --continue
+  skip = rebase --skip
+  fixup = commit --fixup
+
+  tree = log --graph --full-history --all --decorate --oneline
+  re = !git fetch && git rebase origin/master
