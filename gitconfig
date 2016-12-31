@@ -32,5 +32,5 @@
   skip = rebase --skip
   fixup = commit --fixup
 
-  tree = log --graph --full-history --all --decorate --oneline
+  tree = log --graph --full-history --all --decorate --oneline --color
   re = !git fetch && git rebase origin/master
