@@ -36,7 +36,7 @@ imap <silent> <Down> <C-o>gj
 command W w !sudo tee % >/dev/null
 " because that happens way too much
 imap :w<Enter> <Esc>:w<Cr>
-imap :wq<Enter> <Esc>:wq<Cr>  
+imap :wq<Enter> <Esc>:wq<Cr>
 imap :wa<Enter> <Esc>:wa<Cr>
 imap :wqa<Enter> <Esc>:wqa<Cr>
 map Q <Nop>
