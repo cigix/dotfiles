@@ -47,6 +47,8 @@ command Allman :g/).*{\s*$/execute 's/\S\s*{\s*$/\r{/' | normal == \
 " mappings to remove trailing white spaces and write with F5
 map <F5> :%s/\s\+$//e<CR>:w<CR>
 imap <F5> <Esc><F5>i
+" virtual block selection
+set virtualedit=block
 
 " ###   LAYOUT   ###
 " always display cursor position in lower right hand corner
