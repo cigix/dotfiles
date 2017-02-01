@@ -1,7 +1,12 @@
 [[ $- != *i* ]] && return
 
-BEFORE="\[\e[92m\]\u@\[\e[95m\]\h\[\e[92m\]:\w\[\e[0m\]"
-AFTER="\[\e[92m\]>\[\e[0m\] "
+if(("$UID" == 0)) ; then
+    BEFORE="\[\e[1;91m\]\H:\w\[\e[0m\]"
+    AFTER=" \[\e[1;91m\]\\$\[\e[0m\] "
+else
+    BEFORE="\[\e[92m\]\u@\[\e[95m\]\h\[\e[92m\]:\w\[\e[0m\]"
+    AFTER="\[\e[92m\]>\[\e[0m\] "
+fi
 
 source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
