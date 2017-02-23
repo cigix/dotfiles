@@ -161,3 +161,8 @@ bindsym F12 exec firefox
 bindsym mod4+l exec scrot lock.png && mogrify -blur 0x4 lock.png && i3lock -p default -i lock.png
 
 exec firefox
+
+exec setxkbmap fr
+
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
