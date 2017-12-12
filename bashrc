@@ -51,7 +51,7 @@ alias ls='ls --color=always'
 alias grep='grep --color=always'
 alias suod='sudo'
 alias gti='git'
-alias song='curl cigix.noip.me/update.php?eol'
+alias youtube-mp3='youtube-dl --write-thumbnail -x --audio-format mp3'
 alias ma,='man'
 
 mkcd ()
