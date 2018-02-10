@@ -4,7 +4,7 @@ set -e
 
 dotfiles=$(dirname $0)
 
-files="bashrc gitconfig ssh/authorized_keys vimrc git-prompt.sh i3/config i3status.conf signature"
+files="bashrc gitconfig ssh/authorized_keys vimrc git-prompt.sh i3/config i3status.conf profile signature"
 
 git -C "$dotfiles" pull
 

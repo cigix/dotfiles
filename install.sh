@@ -5,7 +5,7 @@ set -e
 dotfiles=$(dirname $0)
 
 append="bashrc gitconfig ssh/authorized_keys vimrc"
-copy="git-prompt.sh i3/config i3status.conf signature"
+copy="git-prompt.sh i3/config i3status.conf profile signature"
 
 for f in $copy
 do
