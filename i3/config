@@ -168,5 +168,6 @@ for_window [class="Display" instance="display display"] floating enable
 
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86MonBrightnessUp exec $HOME/.backlight/up.sh
 bindsym XF86MonBrightnessDown exec $HOME/.backlight/down.sh
