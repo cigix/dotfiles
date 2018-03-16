@@ -34,3 +34,5 @@
 
   tree = log --graph --full-history --all --decorate --oneline --color
   re = !git fetch && git rebase origin/master
+
+  dumbcommit = "!git commit -m \"$(curl whatthecommit.com/index.txt)\""
