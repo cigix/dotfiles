@@ -93,7 +93,7 @@ set autoread
 
 " ###   AUTOCOMMANDS   ###
 " rules per filetype
-au Filetype * set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+au Filetype * set expandtab tabstop=2 shiftwidth=2 softtabstop=2 textwidth=80
 au Filetype make,automake set noexpandtab tabstop=8 shiftwidth=8 softtabstop=8
 au Filetype python,sh set tabstop=4 shiftwidth=4 softtabstop=4
 au Filetype c,cpp set tw=80 fdm=syntax com=s:/*,m:**,ex:*/ colorcolumn=81
