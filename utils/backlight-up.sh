@@ -2,7 +2,7 @@
 
 base=$(dirname $0)
 
-source $base/common.sh
+source $base/backlight-common.sh
 
 if [ $((cur_brightness + indent)) -gt $max_brightness ]
 then
