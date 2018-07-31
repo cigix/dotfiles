@@ -45,7 +45,6 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 export EDITOR="vim"
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 alias ls='ls --color=always'
 alias grep='grep --color=always'
