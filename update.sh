@@ -11,6 +11,11 @@ git -C "$dotfiles" pull
 for f in $files
 do
     target=~/."$f"
-    cmp "$dotfiles/$f" "$target" || vimdiff "$dotfiles/$f" "$target"
+    if [ -e "$target" ]
+    then
+        cmp "$dotfiles/$f" "$target" || vimdiff "$dotfiles/$f" "$target"
+    else
+        cp "$dotfiles/$f" "$target"
+    fi
     echo ".$f"
 done
