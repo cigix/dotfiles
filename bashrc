@@ -50,7 +50,7 @@ alias ls='ls --color=always'
 alias grep='grep --color=always'
 alias suod='sudo'
 alias gti='git'
-alias youtube-mp3='youtube-dl --write-thumbnail -x --audio-format mp3'
+alias youtube-mp3='youtube-dl --embed-thumbnail -x --audio-format mp3'
 alias ma,='man'
 
 mkcd ()
