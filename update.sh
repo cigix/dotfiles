@@ -4,7 +4,7 @@ set -e
 
 dotfiles=$(dirname $0)
 
-files="bashrc gitconfig ssh/authorized_keys vimrc git-prompt.sh i3/config i3status.conf profile signature utils/backlight-common.sh utils/backlight-down.sh utils/backlight-up.sh utils/screen-rotate-daemon.py"
+files="bashrc gitconfig ssh/authorized_keys vimrc git-prompt.sh i3/config i3status.conf profile signature utils/backlight-common.sh utils/backlight-down.sh utils/backlight-up.sh utils/screen-rotate-daemon.py ssh/config"
 
 git -C "$dotfiles" pull
 

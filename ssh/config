@@ -1,0 +1,7 @@
+Host github.com
+  Hostname github.com
+  user git
+
+Host lrde
+  Hostname ssh.lrde.epita.fr
+  user cgillard
