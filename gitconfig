@@ -18,6 +18,12 @@
 [user]
   name = Clément Gillard
   email = clement.gillard@epita.fr
+[sendemail]
+  smtpuser = clement.gillard@epita.fr
+  smtpserver = smtp.office365.com
+  smtpencryption = tls
+  smtpserverport = 587
+  smtppass = lolyouthought
 [merge]
   tool = vimdiff
 [rebase]
