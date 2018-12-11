@@ -47,6 +47,7 @@ fi
 export EDITOR="vim"
 
 alias ls='ls --color=always'
+alias less='less -XF'
 alias grep='grep --color=always'
 alias suod='sudo'
 alias gti='git'
