@@ -47,6 +47,9 @@ command Allman :g/).*{\s*$/execute 's/\S\s*{\s*$/\r{/' | normal == \
 " mappings to remove trailing white spaces and write with F5
 map <F5> :%s/\s\+$//e<CR>:w<CR>:nohlsearch<CR>
 imap <F5> <Esc><F5>i
+" mappings to reindent current paragraph
+map <F6> VipJ:s/\v(^)@<!  +/ /eg<CR>==Vgq:nohlsearch<CR>
+vmap <F6> J:s/\v(^)@<!  +/ /eg<CR>==Vgq:nohlsearch<CR>
 " virtual block selection
 set virtualedit=block
 
