@@ -43,7 +43,7 @@ map Q <Nop>
 " set everything in K&R
 command KR :g/^\s*{/normal kJ
 " set everything in Allman
-command Allman :g/).*{\s*$/execute 's/\S\s*{\s*$/\r{/' | normal == \
+command Allman :g/).*{\s*$/execute 's/\v(\S)@<=\s*\{\s*$/\r{/' | normal == \
 " mappings to remove trailing white spaces and write with F5
 map <F5> :%s/\s\+$//e<CR>:w<CR>:nohlsearch<CR>
 imap <F5> <Esc><F5>i
