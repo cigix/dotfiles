@@ -1,6 +1,6 @@
 [core]
   editor = vim
-  pager = less -F -X
+  pager = less -F -X -S -R
 [color]
   ui = auto
   branch = auto
