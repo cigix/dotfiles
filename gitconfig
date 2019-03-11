@@ -37,6 +37,8 @@
   continue = rebase --continue
   skip = rebase --skip
   fixup = commit --fixup
+  pushf = push --force
+  pushl = push --force-with-lease
 
   tree = log --graph --full-history --all --decorate --oneline --color
   re = !git fetch && git rebase origin/master
