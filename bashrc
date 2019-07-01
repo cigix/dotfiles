@@ -53,6 +53,7 @@ alias suod='sudo'
 alias gti='git'
 alias youtube-mp3='youtube-dl --embed-thumbnail -x --audio-format mp3'
 alias ma,='man'
+alias emptyswap='sudo swapoff -a; sudo swapon -a'
 
 mkcd ()
 {
