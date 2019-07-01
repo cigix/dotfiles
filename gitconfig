@@ -30,6 +30,8 @@
   autosquash = true
 [format]
   pretty = fuller
+[log]
+  date = iso
 [alias]
   st = status
   co = checkout
