@@ -28,6 +28,8 @@
   tool = vimdiff
 [rebase]
   autosquash = true
+[format]
+  pretty = fuller
 [alias]
   st = status
   co = checkout
