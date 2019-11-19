@@ -106,5 +106,7 @@ au FileType gitcommit set tw=70
 au FileType tiger set cindent
 au Filetype mail set colorcolumn=73
 au Filetype java set ts=8 sw=4 sts=4 colorcolumn=121
+au Filetype rust set ts=8 sw=4 sts=4
 " shortcut to insert matching curly brackets when edditing C/C++ files
 au Filetype c,cpp,java inoremap {<Enter> <CR>{<CR>}<Esc>O
+au Filetype rust inoremap {<Enter> {<CR>}<Esc>O
