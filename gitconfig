@@ -26,6 +26,8 @@
   pretty = fuller
 [log]
   date = iso
+[init]
+  defaultBranch = main
 [alias]
   st = status
   co = checkout
