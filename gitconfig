@@ -44,6 +44,7 @@
 
   tree = log --graph --full-history --all --decorate --oneline --color
   re = !git fetch && git rebase origin/master
+  autosquash = !GIT_SEQUENCE_EDITOR=: git rebase origin/$(git rev-parse --abbrev-ref HEAD)^ --autosquash -i
   initial = !git commit -m 'Initial commit' --allow-empty && git tag init
 
   dumbcommit = "!git commit -m \"[DUMBCOMMIT] $(curl whatthecommit.com/index.txt)\""
