@@ -1,9 +1,9 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 from time import sleep
 from os import path as op
 import sys
-from subprocess import check_call, check_output
+from subprocess import check_call, check_output, CalledProcessError
 from glob import glob
 
 
@@ -26,13 +26,13 @@ else:
 devices = check_output(['xinput', '--list', '--name-only']).splitlines()
 
 touchscreen_names = ['touchscreen', 'wacom']
-touchscreens = [i for i in devices if any(j in i.lower() for j in touchscreen_names)]
+touchscreens = [i for i in devices if any(j in i.decode().lower() for j in touchscreen_names)]
 touchscreens.append('SYNA7501:00 06CB:12B8')
 
 disable_touchpads = False
 
 touchpad_names = ['touchpad', 'trackpoint']
-touchpads = [i for i in devices if any(j in i.lower() for j in touchpad_names)]
+touchpads = [i for i in devices if any(j in i.decode().lower() for j in touchpad_names)]
 
 scale = float(read('in_accel_scale'))
 
@@ -54,10 +54,13 @@ def rotate(state):
     s = STATES[state]
     check_call(['xrandr', '-o', s['rot']])
     for dev in touchscreens if disable_touchpads else (touchscreens + touchpads):
-        check_call([
-            'xinput', 'set-prop', dev,
-            'Coordinate Transformation Matrix',
-        ] + s['coord'].split())
+        try:
+            check_call([
+                'xinput', 'set-prop', dev,
+                'Coordinate Transformation Matrix',
+            ] + s['coord'].split())
+        except CalledProcessError:
+            pass
     if disable_touchpads:
         for dev in touchpads:
             check_call(['xinput', s['touchpad'], dev])
@@ -67,8 +70,8 @@ def read_accel(fp):
     fp.seek(0)
     return float(fp.read()) * scale
 
-print "touchscreens: ", touchscreens
-print "touchpads: ", touchpads
+print("touchscreens: ", touchscreens)
+print("touchpads: ", touchpads)
 
 if __name__ == '__main__':
 
