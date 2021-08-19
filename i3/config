@@ -158,7 +158,7 @@ bindsym Print exec scrot
 
 bindsym F12 exec firefox
 
-bindsym mod4+l exec scrot lock.png && mogrify -blur 0x4 lock.png && i3lock -p default -i lock.png
+bindsym mod4+l exec scrot -o lock.png && mogrify -blur 0x4 lock.png && i3lock -p default -i lock.png
 #bindsym mod4+l exec scrot -o lock.png && i3lock -p default -i lock.png
 #bindsym mod4+l exec xtrlock
 
