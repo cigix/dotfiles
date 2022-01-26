@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ -n "$LD_LIBRARY_PATH" ]; then
+  set -f
+  IFS=:
+  for d in $LD_LIBRARY_PATH; do
+    if [ -e "$d/$1" ]; then echo "$d/$1"; fi
+  done
+fi
+/sbin/ldconfig -p |
+awk -v needle="$1" '$1 == needle {sub(/.* => /, ""); print}'
