@@ -63,3 +63,9 @@ mkcd ()
 {
     mkdir -p $1 && cd $1
 }
+gi ()
+{
+    cmd="${1:1}"
+    shift 1
+    git "$cmd" "$@"
+}
