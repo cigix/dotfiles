@@ -41,6 +41,7 @@
   pushf = push --force
   pushl = push --force-with-lease
   pushu = push --set-upstream
+  pullr = pull --rebase
 
   tree = log --graph --full-history --all --decorate --oneline --color
   re = !git fetch && git rebase origin/main
