@@ -48,10 +48,8 @@ fi
 
 export EDITOR="vim"
 
-alias ls='ls --color=always'
 alias ll='ls -lh'
 alias less='less -XFR'
-alias grep='grep --color=always'
 alias suod='sudo'
 alias gti='git'
 alias youtube-mp3='youtube-dl --embed-thumbnail -x --audio-format mp3'
