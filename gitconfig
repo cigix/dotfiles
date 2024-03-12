@@ -7,10 +7,14 @@
   diff = auto
   interactive = auto
   status = auto
+[column]
+  ui = auto
 [commit]
   verbose = true
 [pull]
   rebase = true
+[fetch]
+  writeCommitGraph = true
 [branch]
   autosetuprebase = always
 [push]
@@ -22,6 +26,8 @@
   tool = vimdiff
 [rebase]
   autosquash = true
+[rerere]
+  enabled = true
 [format]
   pretty = fuller
 [log]
@@ -38,8 +44,7 @@
   skip = rebase --skip
   fixup = commit --fixup
   squash = commit --squash
-  pushf = push --force
-  pushl = push --force-with-lease
+  pushf = push --force-with-lease
   pushu = push --set-upstream
   pullr = pull --rebase
 
@@ -47,5 +52,6 @@
   re = !git fetch && git rebase origin/main
   autosquash = !GIT_SEQUENCE_EDITOR=: git rebase origin/$(git rev-parse --abbrev-ref HEAD)^ --autosquash -i
   initial = !git commit -m 'Initial commit' --allow-empty && git tag init
+  blam = blame -w -C -C -C
 
   dumbcommit = "!git commit -m \"[DUMBCOMMIT] $(curl whatthecommit.com/index.txt)\""
