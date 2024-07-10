@@ -55,7 +55,6 @@ alias gti='git'
 alias youtube-mp3='yt-dlp --embed-thumbnail -x --audio-format mp3'
 alias ma,='man'
 alias emptyswap='sudo swapoff -a; sudo swapon -a'
-alias tmp='cd /tmp/'
 
 mkcd ()
 {
@@ -66,4 +65,19 @@ gi ()
     cmd="${1:1}"
     shift 1
     git "$cmd" "$@"
+}
+tmp ()
+{
+    TMP_DIR=$(mktemp -d)
+    cd "$TMP_DIR"
+}
+untemp ()
+{
+    if [ -z "$TMP_DIR" ]
+    then
+        echo '$TMP_DIR not set'
+    else
+        cd /tmp
+        rm -rf "$TMP_DIR"
+    fi
 }
