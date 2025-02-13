@@ -55,6 +55,8 @@ alias gti='git'
 alias youtube-mp3='yt-dlp --embed-thumbnail -x --audio-format mp3'
 alias ma,='man'
 alias emptyswap='sudo swapoff -a; sudo swapon -a'
+alias rsync='rsync -ahh --info=progress2'
+alias dig='echo "Use drill"; :'
 
 mkcd ()
 {
