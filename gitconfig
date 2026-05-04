@@ -56,4 +56,4 @@
   initial = !git commit -m 'Initial commit' --allow-empty && git tag init
   blam = blame -w -C -C -C
 
-  dumbcommit = "!git commit -m \"[DUMBCOMMIT] $(curl whatthecommit.com/index.txt)\""
+  dumbcommit = "!git commit -m \"[DUMBCOMMIT] $(curl https://whatthecommit.com/index.txt)\""
