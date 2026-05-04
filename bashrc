@@ -83,3 +83,19 @@ untemp ()
         rm -rf "$TMP_DIR"
     fi
 }
+retemp ()
+{
+    dirs=$(find /tmp -maxdepth 1 -type d -name 'tmp.*')
+    dirs_len=$(echo "$dirs" | wc -l)
+    if [ "$dirs_len" -eq 0 ]
+    then
+        echo "No temporary directory found"
+    elif [ 2 -le "$dirs_len" ]
+    then
+        echo "Too many temporary directories:"
+        echo "$dirs"
+    else
+        TMP_DIR="$dirs"
+        cd "$TMP_DIR"
+    fi
+}
