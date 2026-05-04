@@ -47,6 +47,7 @@
   pushf = push --force-with-lease
   pushu = push --set-upstream
   pullr = pull --rebase
+  pp = !git pull --rebase && git push
 
   treeb = log --graph --full-history --decorate --oneline --color
   tree = log --graph --full-history --decorate --oneline --color --all
