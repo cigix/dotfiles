@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-base=$(dirname $0)
+base=$(realpath $(dirname "${BASH_SOURCE[0]}"))
 
 source $base/backlight-common.sh
 
